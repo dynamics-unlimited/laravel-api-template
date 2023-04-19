@@ -22,12 +22,14 @@ while [[ -z $password ]]; do
     fi
 done
 
+cd /tmp # move to a folder the postgres user can access
 echo -e "\e[104mCreating user $user\e[49m"
 sudo -u postgres createuser $user
 sudo -u postgres psql -c "ALTER USER ${user} WITH PASSWORD '${password}';"
 echo -e "\e[104mCreating database $db\e[49m"
 sudo -u postgres createdb -O $user $db
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE ${db} TO ${user};"
+cd $OLDPWD # move back to where we were
 
 echo -e "\e[104mUpdating the .env file\e[49m"
 [[ ! -f .env ]] && cp .env.example .env

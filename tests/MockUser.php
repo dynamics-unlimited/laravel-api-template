@@ -1,7 +1,7 @@
 <?php
     namespace Tests;
 
-    use Kairnial\LaravelApi\Models\ExternalUser;
+    use Kairnial\Common\Models\ExternalUser;
     use stdClass;
 
     class MockUser extends ExternalUser

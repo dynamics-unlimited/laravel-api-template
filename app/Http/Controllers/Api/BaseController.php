@@ -1,7 +1,9 @@
 <?php
     namespace App\Http\Controllers\Api;
 
+    use Illuminate\Foundation\Validation\ValidatesRequests;
     use Illuminate\Routing\Controller as RouteController;
+    use Kairnial\LaravelApi\Traits\ApiResponse;
 
     /**
      * @OA\Info(
@@ -25,5 +27,5 @@
      */
     class BaseController extends RouteController
     {
-
+        use ApiResponse, ValidatesRequests;
     }
