@@ -1,7 +1,7 @@
 <?php
     namespace App\Http\Resources;
 
-    use Kairnial\LaravelApi\Http\Resources\BaseResource;
+    use Kairnial\Common\Http\Resources\BaseResource;
 
     /**
      * @property string $example_property

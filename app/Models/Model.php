@@ -3,8 +3,8 @@
 
     use Illuminate\Database\Eloquent\Concerns\HasRelationships;
     use Illuminate\Database\Eloquent\Relations\HasMany;
-    use Kairnial\LaravelApi\Traits\OrderedUuid;
-    use Kairnial\LaravelApi\Models\BaseModel;
+    use Kairnial\Common\Traits\OrderedUuid;
+    use Kairnial\Common\Models\BaseModel;
     use App\Http\Resources\Resource;
 
     /**

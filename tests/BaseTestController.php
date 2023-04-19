@@ -1,7 +1,7 @@
 <?php
     namespace Tests;
 
-    use Kairnial\LaravelApi\Models\Enums\ApiResponseStatus;
+    use Kairnial\Common\Models\Enums\ApiResponseStatus;
     use Kairnial\LaravelApi\Services\Auth\JwtGuard;
     use Symfony\Component\HttpFoundation\Response;
     use Illuminate\Support\Facades\Auth;
